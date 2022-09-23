@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+media_folder: static/images
+public_folder: images
+collections:
+  - name: "authors"
+    label: "Authors"
+    folder: "content/authors"
+    create: true
+    fields:
+      - {label: "Id", name: "id", widget: "hidden", default: "author_{{hour}}{{minute}}{{second}}"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Nationality", name: "nationality", widget: "string"}
+      - {label: "Birth_year", name: "birth_year", widget: "number"}
+      - {label: "Fields", name: "fields", widget: "select", multiple: true,
+         options: ["Database Systems", "Operating Systems", " Distributed computing",
+          "Compilers","Data Structures"]}
+      - {label: "Image", name: "image", widget: "image",
+           media_folder: '/static/images/authors'}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "publishers"
+    label: "Publishers"
+    folder: "content/publishers"
+    create: true
+    fields:
+      - {label: "Id", name: "id", widget: "hidden", default: "publisher_{{hour}}{{minute}}{{second}}"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Country", name: "country", widget: "string"}
+      - {label: "Founded", name: "founded", widget: "number"}
+      - {label: "Genere", name: "genere", widget: "select", multiple: true,
+         options: ["Academic", "Education", " Computer Science"]}
+      - {label: "Image", name: "image", widget: "image",
+           media_folder: '/static/images/publishers'}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "books"
+    label: "Books"
+    folder: "content/books"
+    create: true
+    fields:
+      - {label: "Id", name: "id", widget: "hidden", default: "book_{{hour}}{{minute}}{{second}}"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Edition", name: "edition", widget: "string"}
+      - {label: "Copyright", name: "copyright", widget: "number"}
+      - {label: "Language", name: "language", widget: "string"}
+      - {label: "Pages", name: "pages", widget: "number"}
+      - {label: "Author", name: "authorId", widget: "relation",
+          collection: "authors", search_fields: ["name"], value_field: "id",
+          display_fields: ["name"]}
+      - {label: "Publisher", name: "publisherId", widget: "relation",
+          collection: "publishers", search_fields: ["name"], value_field: "id",
+          display_fields: ["name"]}
+      - {label: "Image", name: "image", widget: "image",
+           media_folder: '/static/images/books'}
+      - {label: "Body", name: "body", widget: "markdown"}
