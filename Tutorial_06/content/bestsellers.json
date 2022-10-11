@@ -1,0 +1,69 @@
+{"items": [
+ {
+   "num": 1,
+   "name": "10-Day Green Smoothie Cleanse",
+   "author": "JJ Smith",
+   "userRating": 4.7,
+   "reviews": 17350,
+   "price": 8,
+   "year": 2016,
+   "genre": "Non Fiction",
+   "slug": "book1"
+ },
+ {
+   "num": 2,
+   "name": "11/22/63: A Novel",
+   "author": "Stephen King",
+   "userRating": 4.6,
+   "reviews": 2052,
+   "price": 22,
+   "year": 2011,
+   "genre": "Fiction",
+   "slug": "book2"
+ },
+ {
+   "num": 3,
+   "name": "12 Rules for Life: An Antidote to Chaos",
+   "author": "Jordan B. Peterson",
+   "userRating": 4.7,
+   "reviews": 18979,
+   "price": 15,
+   "year": 2018,
+   "genre": "Non Fiction",
+   "slug": "book3"
+ },
+ {
+   "num": 4,
+   "name": "1984 (Signet Classics)",
+   "author": "George Orwell",
+   "userRating": 4.7,
+   "reviews": 21424,
+   "price": 6,
+   "year": 2017,
+   "genre": "Fiction",
+   "slug": "book4"
+ },
+ {
+   "num": 5,
+   "name": "5,000 Awesome Facts (About Everything!) (National Geographic Kids)",
+   "author": "National Geographic Kids",
+   "userRating": 4.8,
+   "reviews": 7665,
+   "price": 12,
+   "year": 2019,
+   "genre": "Non Fiction",
+   "slug": "book5"
+ },
+ {
+   "num": 6,
+   "name": "A Dance with Dragons (A Song of Ice and Fire)",
+   "author": "George R. R. Martin",
+   "userRating": 4.4,
+   "reviews": 12643,
+   "price": 11,
+   "year": 2011,
+   "genre": "Fiction",
+   "slug": "book6"
+ }
+ ]
+}
