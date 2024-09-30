@@ -13,5 +13,5 @@
  </div>
 </template>
 <script setup>
-	const { data: authors } = await useFetch(`https://cms-una.000webhostapp.com/api/content/items/authors?fields={"name":true}`)
+	const { data: authors } = await useFetch(`http://cms-una.unaux.com/:bookstore/api/content/items/authors?fields={"name":true}`)
 </script>

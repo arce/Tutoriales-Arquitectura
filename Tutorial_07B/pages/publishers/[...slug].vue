@@ -4,7 +4,7 @@
    <HeaderView />
    <div class="row">
      <div class="three columns">
-       <img class="u-max-full-width" :src="`https://cms-una.000webhostapp.com/storage/uploads${publisher.image.path}`">
+       <img class="u-max-full-width" :src="`http://cms-una.unaux.com/:bookstore/storage/uploads${publisher.image.path}`">
      </div>
      <div class="six columns">
        <h4>{{publisher.name}}</h4>
@@ -27,8 +27,8 @@
 </template>
 <script setup>
 	const route = useRoute()
-	const { data: publisher, refresh: rPublisher } = await useFetch(`https://cms-una.000webhostapp.com/api/content/item/publishers/${route.params.slug}`)
+	const { data: publisher, refresh: rPublisher } = await useFetch(`http://cms-una.unaux.com/:bookstore/api/content/item/publishers/${route.params.slug}`)
 	rPublisher()
-	const { data: books, refresh: rBook } = await useFetch(`https://cms-una.000webhostapp.com/api/content/items/books?filter={"publisherId._id":"${route.params.slug}"}&fields={"title":true}`)
+	const { data: books, refresh: rBook } = await useFetch(`http://cms-una.unaux.com/:bookstore/api/content/items/books?filter={"publisherId._id":"${route.params.slug}"}&fields={"title":true}`)
 	rBook()
 </script>
